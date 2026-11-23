@@ -2,8 +2,7 @@ FROM python:3.11-slim
 
 # Install curl (needed to download the probe) and any other deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        curl \
-        ca-certificates \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install grpc_health_probe into /bin
