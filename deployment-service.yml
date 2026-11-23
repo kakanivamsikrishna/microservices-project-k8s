@@ -29,6 +29,7 @@ spec:
           privileged: false
           readOnlyRootFilesystem: true
         image: vamsikrishnakakani/microservices:emailservice
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
@@ -144,6 +145,7 @@ spec:
       containers:
       - name: server
         image: vamsikrishnakakani/microservices:recommendationservice
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         readinessProbe:
